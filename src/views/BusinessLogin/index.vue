@@ -1,19 +1,14 @@
 <template>
-    <div class="container">
+ <div class="container">
         <div class="content">
             <div class="content-left">
-                <Description title="Welcome back!"
-                    content="Loremcontent background-dark content-left content background-dark content-left "
-                    class="description" />
-                <Button name="Sign in" to="/client-login" />
+                <Description title="Welcome back!" content="Loremcontenttent-left " class="description" />
+                <Button name="Sign Up" to="/business-cadastro"/>
             </div>
             <div class="content-rigth">
-                <h1>Create Account</h1>
+                <h1>Sign In To Plataforma</h1>
                 <form class="form">
-                    <label for="">
-
-                        <input type="text" id="nome" placeholder="Name" />
-                    </label>
+                   
                     <label for="">
                         <input type="email" id="email" placeholder="Email" />
                     </label>
@@ -22,30 +17,29 @@
                     </label>
 
                 </form>
-                <Button name="Sign Up" primaryColor />
+                <Button name="Sign in" primaryColor />
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import Description from "../../components/Description.vue"
-    import Button from "../../components/Button.vue"
-    // import Form from "../../components/Form.vue"
-    export default {
-        name: 'ClientCadastro',
+import Button from '../../components/Button.vue'
+import Description from '../../components/Description.vue'
+
+export default {
+  name: 'ClientLogin',
         components: {
-            // Form,
-            Description,
-            Button
+            Button,
+            Description
         }
 
 
-    }
+}
 </script>
 
 <style scoped>
-    .container {
+.container {
         height: 100vh;
         background: #ecf0f1;
         display: flex;
@@ -87,12 +81,11 @@
     }
 
     h1 {
-        font-size: 14px;
+        font-size:14px;
         color: #4E5FCD;
         margin-bottom: 15px;
-
-
+       
+        
     }
 
-    
 </style>

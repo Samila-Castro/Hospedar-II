@@ -7,6 +7,10 @@ import {
 import Welcome from "../views/Welcome/";
 import ClientCadastro from "../views/ClientCadastro/";
 import BusinessCadastro from "../views/BusinessCadastro/";
+import ClientLogin from "../views/ClientLogin/";
+import BusinessLogin from "../views/BusinessLogin/";
+
+
 import NotFound from "../views/NotFound";
  
 const routes = [
@@ -24,6 +28,16 @@ const routes = [
     path: "/business-cadastro",
     name: "BusinessCadastro",
     component: BusinessCadastro,
+  },
+  {
+    path: "/client-login",
+    name: "ClientLogin",
+    component: ClientLogin,
+  },
+  {
+    path: "/business-login",
+    name: "BusinessLogin",
+    component: BusinessLogin,
   },
   { path: "/:catchAll(.*)", component: NotFound }
 ];

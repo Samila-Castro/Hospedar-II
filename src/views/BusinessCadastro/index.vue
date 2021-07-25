@@ -3,12 +3,28 @@
         <div class="content">
             <div class="content-left">
                 <Description title="Welcome Back!" content="Log in to the platform" class="description" />
-                <Button name="Sign in" />
+                <Button name="Sign in" to="business-login"/>
             </div>
             <div class="content-rigth">
                 <h1>Create Business Account</h1>
-                <Form />
-                <Button name="Sign in" primaryColor />
+                
+                <form class="form">
+                 <label for="">
+
+                        <input type="text" id="nome" placeholder="Name" />
+                    </label>
+                    
+                    <label for="">
+                        <input type="email" id="email" placeholder="Email" />
+                    </label>
+                    <label for="">
+                        <input type="password" id="senha" placeholder="Password" />
+                    </label>
+
+                </form>
+                
+               
+                <Button name="Sign Up" primaryColor />
             </div>
         </div>
     </div>
@@ -17,11 +33,11 @@
 <script>
     import Description from "../../components/Description.vue"
     import Button from "../../components/Button.vue"
-    import Form from "../../components/Form.vue"
+    
     export default {
         name: 'ClientCadastro',
         components: {
-            Form,
+            
             Description,
             Button
         }
