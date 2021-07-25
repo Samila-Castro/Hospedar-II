@@ -10,7 +10,7 @@
       </div>
 
         <div class="description">
-          <Description content="Loremcontent background-dark content-left content background-dark content-left " />
+          <Description content="Lorem ipsum is placeholder text commonly used in the graphic print, and publishing. " />
         </div>
         <div class="buttons">
           <Button name="Business" to="business-cadastro"/>
