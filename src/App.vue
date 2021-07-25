@@ -1,11 +1,9 @@
 <template>
-  
+  <router-view/>
 </template>
 
 <script>
-import Form from './components/Form.vue'
 export default {
-
 
 }
 </script>

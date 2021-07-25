@@ -1,0 +1,67 @@
+<template>
+  <div class="container">
+    <div class="content background-dark content-left">
+      <Logo />
+    </div>
+
+    <div class="content content-rigth">
+      <div class="header">
+        <Header />
+      </div>
+
+        <div class="description">
+          <Description content="Loremcontent background-dark content-left content background-dark content-left " />
+        </div>
+        <div class="buttons">
+          <Button name="Business" to="business-cadastro"/>
+          <Button name="Client" to="client-cadastro"/>
+        </div>
+    </div> 
+  </div>
+</template>
+
+<script>
+  import Header from './components/Header.vue'
+  import Button from '../../components/Button.vue'
+  import Logo from '../../components/Logo.vue'
+  import Description from '../../components/Description.vue'
+  
+  export default {
+    name: 'Welcome',
+    components: {
+      Header,
+      Logo,
+      Button,
+      Description
+    }
+  }
+</script>
+
+<style scoped>
+  .container {
+    display: flex;
+  }
+
+  .content {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .description {
+    padding: 90px 20px 80px;
+    text-align: center;
+  }
+
+
+  .content-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+</style>

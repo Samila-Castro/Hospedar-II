@@ -23,13 +23,12 @@
 <style scoped>
 
   ul {
-
     list-style-type: none;
-    padding: 0;
     display: inline-block;
     padding: 0 12px;
     display: flex;
     justify-content: space-evenly;
+    font-size: 10px;
   }
 
   nav {

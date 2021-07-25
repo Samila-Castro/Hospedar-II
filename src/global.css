@@ -12,14 +12,6 @@
     background: #4E5FCD;
 }
 
-.container{
-    display: flex;
-}
-
-.content{
-   width: 50vw;
-   height: 100vh;
-}
 
 .background-dark{
     background: #094275

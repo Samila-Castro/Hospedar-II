@@ -1,5 +1,16 @@
 import { createApp } from 'vue'
-import Welcome from './Welcome.vue'
+import App from './App.vue'
 import './global.css';
+// // Only import what you need!
 
-createApp(Welcome).mount('#app')
+
+
+
+
+
+
+
+import router from "./router";
+const app = createApp(App);
+app.use(router);
+app.mount("#app");

@@ -10,7 +10,8 @@
     }
 </script>
 
-<style>
+
+<style scoped>
     .title-primary {
         color: #F0D5C0;
         font-size: 50px;
@@ -23,7 +24,7 @@
     }
 
     .title {
-        font-size: 55px;
+        font-size: 32px;
         font-weight: bold;
         text-transform: capitalize;
     }
