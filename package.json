@@ -11,6 +11,7 @@
     "@vue-hero-icons/outline": "^1.7.2",
     "@vue-hero-icons/solid": "^1.7.2",
     "core-js": "^3.6.5",
+    "element-plus": "^1.0.2-beta.59",
     "font-awesome": "^4.7.0",
     "vue": "^3.0.0",
     "vue-material-design-icons": "^4.12.1",
