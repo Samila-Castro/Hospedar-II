@@ -12,13 +12,13 @@
                 <form class="form">
                     <label for="">
 
-                        <input type="text" id="nome" placeholder="Name" />
+                        <input type="text" id="nome" placeholder="Name" minlength="6" required/>
                     </label>
                     <label for="">
-                        <input type="email" id="email" placeholder="Email" />
+                        <input type="email" id="email" placeholder="Email" required/>
                     </label>
                     <label for="">
-                        <input type="password" id="senha" placeholder="Password" />
+                        <input type="password" id="senha" placeholder="Password" inlength="8" required/>
                     </label>
 
                 </form>
