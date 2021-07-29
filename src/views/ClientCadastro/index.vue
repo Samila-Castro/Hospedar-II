@@ -1,4 +1,5 @@
 <template>
+<pre>{{form}}</pre>
     <div class="container">
         <div class="content">
             <div class="content-left">
@@ -12,28 +13,46 @@
                 <form class="form">
                     <label for="">
 
-                        <input type="text" id="nome" placeholder="Name" minlength="6" required/>
+                        <input type="text" id="nome" placeholder="Name" v-model="form.name" minlength="6" required/>
                     </label>
                     <label for="">
-                        <input type="email" id="email" placeholder="Email" required/>
+                        <input type="email" id="email" placeholder="Email" v-model="form.email" required/>
                     </label>
                     <label for="">
-                        <input type="password" id="senha" placeholder="Password" inlength="8" required/>
+                        <input type="password" id="senha" placeholder="Password" v-model="form.password" inlength="8" required/>
                     </label>
 
                 </form>
-                <Button name="Sign Up" primaryColor />
+                <Button name="Sign Up" @click="submitForm" primaryColor to="/client-login"/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import api from "../././../services/api.js"
     import Description from "../../components/Description.vue"
     import Button from "../../components/Button.vue"
-    // import Form from "../../components/Form.vue"
+   
     export default {
         name: 'ClientCadastro',
+        data(){
+            return{
+                form: {
+                    name: '',
+                    email:'',
+                    password: ''
+                }
+            }
+        },
+           methods: {
+       async submitForm() {
+         await api.post('/users', this.form)
+        alert("Cadastrado com sucesso!")
+        // console.log(response.data);
+      },
+      
+    },
         components: {
             // Form,
             Description,
