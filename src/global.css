@@ -9,7 +9,7 @@
 
 #app {
     height: 100vh;
-    background: #4E5FCD;
+    background: #fff;
 }
 
 
@@ -23,12 +23,12 @@ body {
 }
 
 input {
-    width: 150px;
+    width: 290px;
     margin: 3px;
-    height: 23px;
+    height: 15px;
     border: none;
-    font-size: 8px;
-    padding: 10px;
+    font-size: 18px;
+    padding: 20px;
     background-color: #ecf0f1;
   }
 
@@ -36,4 +36,7 @@ input {
    
     display: flex;
     flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
     }

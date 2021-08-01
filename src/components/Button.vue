@@ -1,12 +1,24 @@
 <template>
   <div class="content-btn">
+    
+    
     <router-link :to="to"
+    v-if="to"
     class="button"
     :class="{'primary-color': primaryColor}"
     >
    
       {{name}}
     </router-link>
+
+    <button 
+    v-else
+    class="button"
+    :class="{'primary-color': primaryColor}"
+    >
+   
+      {{name}}
+    </button>
   </div>
 </template>
 
@@ -15,7 +27,7 @@
     props: {
       to: {
          type: String,
-         default: '/'
+         default: ''
       },
       name: String,
       primaryColor: {
@@ -38,7 +50,7 @@
     padding: 5px 20px;
     text-decoration: none;
     display: inline-block;
-    font-size: 8px;
+    font-size: 18px;
     background-color: transparent;
     cursor: pointer;
   }

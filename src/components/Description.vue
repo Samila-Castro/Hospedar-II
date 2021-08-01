@@ -39,17 +39,17 @@
     }
 
     .title {
-        font-size: 15px;
+        font-size: 30px;
         font-weight: bold;
         text-transform: capitalize;
         margin-bottom: 15px;
     }
 
     .description {
-        font-size: 10px;
+        font-size: 20px;
         font-weight: 300;
         color: #fff;
-        line-height: 15px;
+        line-height: 45px;
         padding: 5px;
     }
     

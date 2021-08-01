@@ -3,8 +3,7 @@
     <ul id="menu">
       <li><a href="#Home">Home</a></li>
       <li><a href="#About us">About us</a></li>
-      <li><a href="#Contact">Contact</a></li>
-      <li><a href="#Services">Services</a></li>
+      <li><a @click="logout()">Sair</a></li>
     </ul>
   </nav>
 
@@ -15,6 +14,14 @@
     name: 'Header',
     props: {
       msg: String
+    },
+    components:{
+    },
+    methods:{
+      logout(){
+          localStorage.removeItem('@hospedar-login');
+          this.$router.push(`/`);
+      }
     }
   }
 </script>
@@ -32,12 +39,14 @@
   }
 
   nav {
-    /* margin-bottom: 230px; */
-    margin-top: 20px;
+    padding: 20px;
+    background: #094275;
+     width: 100vw;
   }
 
   a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
   }
 </style>

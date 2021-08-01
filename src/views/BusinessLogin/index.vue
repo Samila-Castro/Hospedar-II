@@ -2,28 +2,28 @@
  <div class="container">
         <div class="content">
             <div class="content-left">
-                <Description title="Welcome back!" content="Loremcontenttent-left " class="description" />
+                <Description title="Hello, Friend!" content="rem ipsum is placeholder text " class="description" />
                 <Button name="Sign Up" to="/business-cadastro"/>
             </div>
             <div class="content-rigth">
                 <h1>Sign In To Plataforma</h1>
-                <form class="form">
-                   
+                <form class="form" @submit="(e) => submitForm(e)">
                     <label for="">
-                        <input type="email" id="email" placeholder="Email" />
+                        <input type="email" id="email" placeholder="Email" v-model="form.email" required/>
                     </label>
                     <label for="">
-                        <input type="password" id="senha" placeholder="Password" />
+                        <input type="password" id="senha" placeholder="Password" v-model="form.password" required/>
                     </label>
 
+                    <Button name="Sign in" primaryColor type="submit"/>
                 </form>
-                <Button name="Sign in" primaryColor />
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import api from "../../services/api"
 import Button from '../../components/Button.vue'
 import Description from '../../components/Description.vue'
 
@@ -32,7 +32,31 @@ export default {
         components: {
             Button,
             Description
-        }
+        },
+
+        methods: {
+            async submitForm(e) {
+                try {
+                    e.preventDefault()
+                    const result = await api.post('/session', this.form)
+                    localStorage.setItem('@hospedar-login', JSON.stringify(result.data));
+                    alert("Login com sucesso!")
+                     this.$router.push(`/entidade-list`);
+                } catch (error) {
+                    alert("Erro ao tentar login!")
+                }
+            },
+
+        },
+
+        data() {
+            return {
+                form: {
+                    email: '',
+                    password: ''
+                }
+            }
+        },
 
 
 }
@@ -81,9 +105,9 @@ export default {
     }
 
     h1 {
-        font-size:14px;
+        font-size:25px;
         color: #4E5FCD;
-        margin-bottom: 15px;
+        margin-bottom:30px;
        
         
     }

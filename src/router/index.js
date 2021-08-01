@@ -9,6 +9,12 @@ import ClientCadastro from "../views/ClientCadastro/";
 import BusinessCadastro from "../views/BusinessCadastro/";
 import ClientLogin from "../views/ClientLogin/";
 import BusinessLogin from "../views/BusinessLogin/";
+import CadastroEntidade from "../views/CadastroEntidade/";
+import ListEntidade from "../views/ListEntidade/";
+import DetailsEntidade from "../views/DetailsEntidade/";
+
+
+
 
 
 import NotFound from "../views/NotFound";
@@ -38,6 +44,21 @@ const routes = [
     path: "/business-login",
     name: "BusinessLogin",
     component: BusinessLogin,
+  },
+  {
+    path: "/entidade-cadastro",
+    name: "CadastroEntidade",
+    component: CadastroEntidade,
+  },
+  {
+    path: "/entidade-list",
+    name: "ListEntidade",
+    component: ListEntidade,
+  },
+  {
+    path: "/entidade/:id",
+    name: "DetailsEntidade",
+    component: DetailsEntidade,
   },
   { path: "/:catchAll(.*)", component: NotFound }
 ];

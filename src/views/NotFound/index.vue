@@ -27,5 +27,6 @@
     align-items: center;
     color: #fff;
     padding: 70px;
+    background-color:#4E5FCD ;
   }
 </style>

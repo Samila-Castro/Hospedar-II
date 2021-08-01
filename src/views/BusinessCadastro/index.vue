@@ -4,28 +4,26 @@
         <div class="content">
             <div class="content-left">
                 <Description title="Welcome Back!" content="Log in to the platform" class="description" />
-                <Button name="Sign in" to="business-login"/>
+                <Button name="Sign in" to="business-login" />
             </div>
             <div class="content-rigth">
                 <h1>Create Business Account</h1>
-                
-                <form class="form" >
-                 <label for="">
 
-                        <input type="text" id="name" placeholder="Name" v-model="form.name" minlength="6" required/>
-                    </label>
-                    
+                <form class="form" @submit="(e) => submitForm(e)">
                     <label for="">
-                        <input type="email" id="email" v-model="form.email" placeholder="Email" required/>
-                    </label>
-                    <label for="">
-                        <input type="password" id="password" v-model="form.password" placeholder="Password" minlength="8" required/>
+
+                        <input type="text" id="name" placeholder="Name" v-model="form.name" minlength="6" required />
                     </label>
 
+                    <label for="">
+                        <input type="email" id="email" v-model="form.email" placeholder="Email" required />
+                    </label>
+                    <label for="">
+                        <input type="password" id="password" v-model="form.password" placeholder="Password"
+                            minlength="8" required />
+                    </label>
+                    <Button name="Sign Up" type="submit" primaryColor />
                 </form>
-                
-               
-                <Button name="Sign Up" @click="submitForm" primaryColor to="business-login" />
             </div>
         </div>
     </div>
@@ -36,26 +34,32 @@
 
     import Description from "../../components/Description.vue"
     import Button from "../../components/Button.vue"
-    
+
     export default {
         name: 'ClientCadastro',
-        data(){
-            return{
+        data() {
+            return {
                 form: {
-                    name:'',
-                    email:'',
-                    password:''
+                    name: '',
+                    email: '',
+                    password: '',
+                    type: 'BUSINESS'
                 }
             }
         },
-          methods: {
-       async submitForm() {
-         await api.post('/users', this.form)
-        alert("Cadastrado com sucesso!")
-       
-      },
-      
-    },
+        methods: {
+            async submitForm(e) {
+                try {
+                    e.preventDefault()
+                    await api.post('/users', this.form)
+                    alert("Cadastrado com sucesso!")
+                    this.$router.push(`/business-login`);
+                } catch (error) {
+                    alert("Erro ao cadastrar usuário!")
+                }
+            },
+
+        },
         components: {
             Description,
             Button
@@ -89,7 +93,7 @@
         align-content: stretch;
         justify-content: center;
         align-items: center;
-       
+
     }
 
     .content-rigth {
@@ -109,12 +113,11 @@
     }
 
     h1 {
-        font-size:14px;
+        font-size: 25px;
         color: #4E5FCD;
-        margin-bottom: 15px;
-       
-        
+        margin-bottom: 30px;
+
+
     }
 
-    
 </style>

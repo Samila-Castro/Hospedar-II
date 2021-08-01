@@ -24,7 +24,7 @@
     }
 
     .title {
-        font-size: 32px;
+        font-size: 52px;
         font-weight: bold;
         text-transform: capitalize;
     }

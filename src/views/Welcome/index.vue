@@ -40,6 +40,8 @@
 <style scoped>
   .container {
     display: flex;
+    height: 100vh;
+    background: #4E5FCD;
   }
 
   .content {
@@ -48,7 +50,7 @@
   }
 
   .description {
-    padding: 90px 20px 80px;
+    padding: 180px 20px 180px;
     text-align: center;
   }
 
