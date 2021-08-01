@@ -3,7 +3,7 @@
     <ul id="menu">
       <li><a href="#Home">Home</a></li>
       <li><a href="#About us">About us</a></li>
-      <li><a @click="logout()">Sair</a></li>
+      <li><a @click="logout()">Go out</a></li>
     </ul>
   </nav>
 
