@@ -2,7 +2,7 @@
   <div class="container-list">
   <Header />
   <div class="container-table">
-  <Button v-if="isBusiness" name="Cadastrar novo imovel" :to="`/entidade-cadastro`" primaryColor />
+  <Button v-if="isBusiness" name="Register new property" :to="`/entidade-cadastro`" primaryColor />
    <table :data="imoveis">
     <tr>
       <th>Nome da propriedade</th>
