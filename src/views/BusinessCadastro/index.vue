@@ -29,3 +29,44 @@
     </div>
 </template>
 
+<script>
+    import api from "../././../services/api.js"
+
+    import Description from "../../components/Description.vue"
+    import Button from "../../components/Button.vue"
+
+    export default {
+        name: 'ClientCadastro',
+        data() {
+            return {
+                form: {
+                    name: '',
+                    email: '',
+                    password: '',
+                    type: 'BUSINESS'
+                }
+            }
+        },
+        methods: {
+            async submitForm(e) {
+                try {
+                    e.preventDefault()
+                    await api.post('/users', this.form)
+                    alert("Cadastrado com sucesso!")
+                    this.$router.push(`/business-login`);
+                } catch (error) {
+                    alert("Erro ao cadastrar usuário!")
+                }
+            },
+
+        },
+        components: {
+            Description,
+            Button
+        }
+
+
+    }
+</script>
+
+
